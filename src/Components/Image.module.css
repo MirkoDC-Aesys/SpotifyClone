@@ -1,0 +1,31 @@
+.container {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px 10px;
+    background-color: red;
+    position: relative;
+    overflow: hidden;
+}
+
+.title {
+    color: var(--color-primary);
+    font-size: 22px;
+    font-weight: 800;
+    word-break: break-all;
+}
+
+.img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: -12px;
+    right: -12px;
+    transform: rotate(30deg);
+    background-color: yellow;
+}
+
+.img img {
+    width: 100%;
+}

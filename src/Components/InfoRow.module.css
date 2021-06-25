@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.container:hover {
+    cursor: pointer;
+}
+
+.container:hover a {
+    color: var(--color-primary);
+}
+
+.container:hover i {
+    color: var(--color-primary);
+}
+
+.left {
+    padding: 15px 20px 15px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.left i {
+    font-size: 25px;
+    color: var(--color-secondary);
+}
+
+.right {
+    flex-grow: 1;
+}
+
+.right a {
+    color: var(--color-secondary);
+    font-weight: bold;
+    text-decoration: none;
+}

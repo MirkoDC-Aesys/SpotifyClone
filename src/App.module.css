@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.containerTop {
+    flex-grow: 1;
+    display: flex;
+}
+
+.containerSidebar {
+    background-color: #000;
+}
+
+.containerRight {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerNavbar {
+    background-color: #070707;
+}
+
+.containerContent {
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: #121212;
+    height: 1px;
+}
+
+.containerPlayer {
+    background-color: #121212;
+    border-top: 1px solid rgb(40, 40, 40);
+}

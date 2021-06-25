@@ -1,24 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import Login from './Pages/Login'
+import styles from './App.module.css'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom"
+import Home from './Pages/Home/Home'
+import Search from './Pages/Search/Search'
+import Navbar from './Components/Navbar'
+import Sidebar from './Components/Sidebar'
+import Player from './Components/Player'
+
+const token = new URLSearchParams(
+  window.location.hash.replace('#', '&')
+).get('access_token')
+
+if (token) {
+  localStorage.setItem('token', token)
+  window.history.pushState({}, null, '/')
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    !localStorage.getItem('token') ?
+      <Login />
+      :
+      <Router>
+        <div className={styles.container}>
+          <div className={styles.containerTop}>
+            <div className={styles.containerSidebar}>
+              <Sidebar />
+            </div>
+            <div className={styles.containerRight}>
+              <div className={styles.containerNavbar}>
+                <Navbar />
+              </div>
+              <div className={styles.containerContent}>
+                <Switch>
+                  <Route exact path='/' component={Home} />
+                  <Route path='/search' component={Search} />
+                  <Route path='/collection' component={() => <div>Collection</div>} />
+                </Switch>
+              </div>
+            </div>
+          </div>
+          <div className={styles.containerPlayer}>
+            <Player />
+          </div>
+        </div>
+      </Router>
   );
 }
 

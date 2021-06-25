@@ -1,0 +1,37 @@
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: calc(5px + 3vh) 0;
+}
+
+.titleLeft {
+    color: var(--color-primary);
+    font-weight: 800;
+    font-size: 26px;
+    text-decoration: none;
+}
+
+.titleLeft:hover {
+    cursor: pointer;
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.descriptionLeft {
+    font-size: 14px;
+    color: var(--color-secondary)
+}
+
+.titleRight {
+    color: var(--color-secondary);
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.titleRight:hover {
+    cursor: pointer;
+    color: var(--color-secondary);
+    text-decoration: underline;
+}
