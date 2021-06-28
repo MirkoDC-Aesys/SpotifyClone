@@ -1,0 +1,21 @@
+.container {
+    text-align: center;
+    color: var(--color-primary);
+    margin: 2% 0;
+    word-break: break-all;
+}
+
+.icon i {
+    font-size: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 2%;
+}
+
+.desc {
+    font-size: 1rem;
+    margin-bottom: 2%;
+}
