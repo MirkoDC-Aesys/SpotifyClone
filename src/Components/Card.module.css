@@ -1,9 +1,11 @@
 .container {
     width: 18%;
+    min-width: 100px;
     background-color: #171717;
     padding: 16px;
     transition: background-color 0.3s;
     border-radius: 5px;
+    margin: 10px;
 }
 
 .container:hover {
@@ -19,6 +21,19 @@
 
 .img img {
     width: 100%;
+}
+
+.imgDefault {
+    width: 100%;
+    height: 160px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgDefault i {
+    font-size: 2rem;
 }
 
 .circlePlay {

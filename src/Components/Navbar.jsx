@@ -3,9 +3,10 @@ import styles from './Navbar.module.css'
 import { getUser } from '../api/spotify'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import Button from './Button'
 
-export default function Navbar() {
+export default function Navbar({ navPath }) {
     const [user, setUser] = useState('')
 
     useEffect(() => {
@@ -22,9 +23,21 @@ export default function Navbar() {
                     <i className="fas fa-chevron-right"></i>
                 </div>
             </div>
-            <div style={{marginLeft: 'auto', marginRight: '5%'}}>
-                <Button>EFFETTUA L'UPGRADE</Button>
-            </div>
+            {
+                navPath === '' ?
+                    <div style={{ marginLeft: 'auto', marginRight: '5%' }}>
+                        <Button>EFFETTUA L'UPGRADE</Button>
+                    </div>
+                    : navPath === 'search' ?
+                        <div style={{ marginRight: 'auto', marginLeft: '5%' }}>
+                            <input type="text" />
+                        </div>
+                        :
+                        <div className={styles.collectionContainer}>
+                            Collection
+                        </div>
+            }
+
             <div className={styles.user}>
                 <div className={styles.userImg}>
                     <i className="far fa-user"></i>

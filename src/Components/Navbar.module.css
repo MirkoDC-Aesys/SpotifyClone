@@ -23,6 +23,14 @@
     margin-right: 10px;
 }
 
+.collectionContainer {
+    display: flex;
+}
+
+.collectionContainer a {
+    padding: 20px;
+}
+
 .user {
     display: flex;
     align-items: center;

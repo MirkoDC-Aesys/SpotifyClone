@@ -11,6 +11,7 @@ import Collection from './Pages/Collection/Collection'
 import Navbar from './Components/Navbar'
 import Sidebar from './Components/Sidebar'
 import Player from './Components/Player'
+import { useReducer } from 'react'
 
 const token = new URLSearchParams(
   window.location.hash.replace('#', '&')
@@ -21,7 +22,22 @@ if (token) {
   window.history.pushState({}, null, '/')
 }
 
+function reducer(navPath, action) {
+  switch (action.type) {
+    case '/':
+      return ''
+    case '/search':
+      return 'search'
+    case '/collection':
+      return 'collection'
+    default:
+      return ''
+  }
+}
+
 function App() {
+  const [navPath, dispatch] = useReducer(reducer, 'home')
+
   return (
     !localStorage.getItem('token') ?
       <Login />
@@ -30,11 +46,11 @@ function App() {
         <div className={styles.container}>
           <div className={styles.containerTop}>
             <div className={styles.containerSidebar}>
-              <Sidebar />
+              <Sidebar dispatch={dispatch} />
             </div>
             <div className={styles.containerRight}>
               <div className={styles.containerNavbar}>
-                <Navbar />
+                <Navbar navPath={navPath} />
               </div>
               <div className={styles.containerContent}>
                 <Switch>

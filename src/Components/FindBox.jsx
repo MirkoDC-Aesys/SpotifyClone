@@ -7,6 +7,7 @@ export default function FindBox({
     title,
     description,
     testoBottone = 'Invia',
+    buttonStyle,
     location = '/'
 }) {
     return (
@@ -21,7 +22,7 @@ export default function FindBox({
                 {description}
             </div>
             <div>
-                <Button location={location}>{testoBottone}</Button>
+                <Button location={location} buttonStyle={buttonStyle}>{testoBottone}</Button>
             </div>
         </div>
     )

@@ -28,3 +28,13 @@ export const getAllCategories = () => {
     return axiosSpotify(`https://api.spotify.com/v1/browse/categories`)
     .then(res => res.data.categories.items)
 }
+
+export const getUserTracks = () => {
+    return axiosSpotify(`/me/tracks`)
+    .then(res => res.data.items)
+}
+
+export const getUserPlaylists = () => {
+    return axiosSpotify(`/me/playlists`)
+    .then(res => res.data.items)
+}
