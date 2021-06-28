@@ -3,6 +3,7 @@ import styles from './Navbar.module.css'
 import { getUser } from '../api/spotify'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import Button from './Button'
 
 export default function Navbar() {
     const [user, setUser] = useState('')
@@ -21,7 +22,9 @@ export default function Navbar() {
                     <i className="fas fa-chevron-right"></i>
                 </div>
             </div>
-            <div>altro</div>
+            <div style={{marginLeft: 'auto', marginRight: '5%'}}>
+                <Button>EFFETTUA L'UPGRADE</Button>
+            </div>
             <div className={styles.user}>
                 <div className={styles.userImg}>
                     <i className="far fa-user"></i>

@@ -1,0 +1,24 @@
+.btn {
+    border: none;
+    outline: none;
+    padding: 5px 25px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.btnPrimary {
+    background-color: #000;
+    color: var(--color-primary);
+    border: 1px solid #fff;
+}
+
+.btnSecondary {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #fff;
+}
+
+.btn:hover {
+    transform: scale(1.1)
+}
