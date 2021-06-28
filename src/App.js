@@ -7,6 +7,7 @@ import {
 } from "react-router-dom"
 import Home from './Pages/Home/Home'
 import Search from './Pages/Search/Search'
+import Collection from './Pages/Collection/Collection'
 import Navbar from './Components/Navbar'
 import Sidebar from './Components/Sidebar'
 import Player from './Components/Player'
@@ -39,7 +40,7 @@ function App() {
                 <Switch>
                   <Route exact path='/' component={Home} />
                   <Route path='/search' component={Search} />
-                  <Route path='/collection' component={() => <div>Collection</div>} />
+                  <Route path='/collection' component={Collection} />
                 </Switch>
               </div>
             </div>
