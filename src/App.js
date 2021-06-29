@@ -8,6 +8,7 @@ import {
 import Home from './Pages/Home/Home'
 import Search from './Pages/Search/Search'
 import Collection from './Pages/Collection/Collection'
+import BrowsePlaylist from './Components/BrowsePlaylist'
 import Navbar from './Components/Navbar'
 import Sidebar from './Components/Sidebar'
 import Player from './Components/Player'
@@ -57,6 +58,7 @@ function App() {
                   <Route exact path='/' component={Home} />
                   <Route path='/search' component={Search} />
                   <Route path='/collection' component={Collection} />
+                  <Route path='/playlist/:id' component={BrowsePlaylist} />
                 </Switch>
               </div>
             </div>

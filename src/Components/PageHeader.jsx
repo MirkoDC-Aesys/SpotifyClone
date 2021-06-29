@@ -4,24 +4,31 @@ import {container, imgDiv,info, titleStyle} from './PageHeader.module.css'
 
 export default function PageHeader({
     icona = <i className="fas fa-music"></i>,
+    img,
     headTitle = 'titolino',
-    title = 'titolo'
+    title = 'titolo',
+    description
 }) {
-    const [userName, setUserName] = useState('')
+    /*const [userName, setUserName] = useState('')
 
     useEffect(()=> {
         getUser().then(res => setUserName(res.display_name))
-    }, [])
+    }, [])*/
 
     return (
         <div className={container}>
             <div className={imgDiv}>
-                {icona}
+                {
+                    img ? 
+                    <img src={img} alt="" />
+                    :
+                    icona
+                }
             </div>
             <div className={info}>
                 <div>{headTitle}</div>
                 <div className={titleStyle}>{title}</div>
-                <div>{userName}</div>
+                <div>{description}</div>
             </div>
         </div>
     )

@@ -1,0 +1,66 @@
+.container {
+    display: flex;
+    align-items: center;
+    color: var(--color-primary);
+    padding: 5px 0;
+    /* white-space: nowrap; */
+}
+
+.container > div {
+    margin-right: 1%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.num {
+    flex: 0.5;
+    color: var(--color-secondary)
+}
+
+.title {
+    flex: 4;
+    display: flex;
+    align-items: flex-end;
+}
+
+.imgDiv {
+    width: 40px;
+    height: 40px;
+    margin-right: 2%;
+    flex-shrink: 0;
+}
+
+.imgDiv img {
+    width: 100%;
+    height: 100%;
+}
+
+.infoTrack {
+    overflow: hidden;
+}
+
+.trackTitle {
+    color: var(--color-primary);
+    line-height: 1;
+    font-weight: 500;
+}
+
+.trackAuthor {
+    color: var(--color-secondary);
+    line-height: 1;
+}
+
+.album {
+    flex: 2;
+    color: var(--color-secondary);
+}
+
+.date {
+    flex: 2;
+    color: var(--color-secondary);
+}
+
+.time {
+    flex: 0.5;
+    color: var(--color-secondary);
+}

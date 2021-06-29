@@ -4,7 +4,6 @@ import Card from '../../Components/Card'
 import { getUserPlaylists, getUserTracks } from '../../api/spotify'
 
 export default function Playlist() {
-    console.log('playlist')
     return (
         <div className={container}>
             <div className={topBox}>

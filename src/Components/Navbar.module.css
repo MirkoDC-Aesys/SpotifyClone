@@ -21,6 +21,7 @@
     align-items: center;
     border-radius: 50%;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .collectionContainer {
@@ -28,7 +29,19 @@
 }
 
 .collectionContainer a {
-    padding: 20px;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.collectionContainer a:hover {
+    color: var(--color-primary);
+}
+
+.collectionContainer a:focus {
+    background-color: gray;
 }
 
 .user {

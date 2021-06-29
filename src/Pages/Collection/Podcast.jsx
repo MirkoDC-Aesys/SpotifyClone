@@ -2,7 +2,6 @@ import React from 'react'
 import FindBox from '../../Components/FindBox'
 
 export default function Podcast() {
-    console.log('podcast')
     return (
         <div>
             <FindBox icona={<i className="fas fa-broadcast-tower"></i>}

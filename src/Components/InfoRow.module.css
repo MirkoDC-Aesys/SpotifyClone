@@ -2,17 +2,12 @@
     display: flex;
     align-items: center;
     padding: 0 16px;
+    color: var(--color-secondary);
+    transition: color 0.3s;
 }
 
 .container:hover {
     cursor: pointer;
-}
-
-.container:hover a {
-    color: var(--color-primary);
-}
-
-.container:hover i {
     color: var(--color-primary);
 }
 
@@ -24,7 +19,6 @@
 
 .left i {
     font-size: 25px;
-    color: var(--color-secondary);
 }
 
 .right {
@@ -32,7 +26,6 @@
 }
 
 .right a {
-    color: var(--color-secondary);
     font-weight: bold;
     text-decoration: none;
 }

@@ -9,6 +9,9 @@ import Button from './Button'
 export default function Navbar({ navPath }) {
     const [user, setUser] = useState('')
 
+    const handleLeftArrow = ()=> window.history.back()
+    const handleRightArrow = ()=> window.history.forward()
+
     useEffect(() => {
         getUser().then(res => setUser(res.display_name))
     }, [])
@@ -16,10 +19,10 @@ export default function Navbar({ navPath }) {
     return (
         <div className={styles.container}>
             <div className={styles.arrows}>
-                <div className={styles.arrow}>
+                <div onClick={handleLeftArrow} className={styles.arrow}>
                     <i className="fas fa-chevron-left"></i>
                 </div>
-                <div className={styles.arrow}>
+                <div onClick={handleRightArrow} className={styles.arrow}>
                     <i className="fas fa-chevron-right"></i>
                 </div>
             </div>
@@ -34,7 +37,10 @@ export default function Navbar({ navPath }) {
                         </div>
                         :
                         <div className={styles.collectionContainer}>
-                            Collection
+                            <Link to='/collection/playlists'>Playlist</Link>
+                            <Link to='/collection/podcasts'>Podcast</Link>
+                            <Link to='/collection/artists'>Artisti</Link>
+                            <Link to='/collection/albums'>Album</Link>
                         </div>
             }
 
